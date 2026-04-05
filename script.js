@@ -1,3 +1,6 @@
+
+console.log("SCRIPT CARREGADO");''
+
 let pontos = 0;
 const max = 10;
 
@@ -116,15 +119,14 @@ if (rankTopo) {
 
 /* BOTÕES */
 function acerto() {
-  if (pontos === 0) {
-    pontos = 1; // desbloqueia D
-  } else if (pontos < max) {
-    pontos++;
-  }
+  console.log("ACERTO");
+  pontos += 1;
+  if (pontos > max) pontos = max;
   atualizar();
 }
 
 function erro() {
+  console.log("ERRO");
   if (pontos === 0) return;
 
   const rank = getRank(pontos);
@@ -143,13 +145,21 @@ function erro() {
 }
 
 function devil() {
-  if (pontos === 0) {
-    pontos = 1;
-  } else {
-    pontos = Math.min(max, pontos + 2);
-  }
+  console.log("DEVIL");
+  pontos += 3;
+  if (pontos > max) pontos = max;
   atualizar();
 }
 
-/* START */
-atualizar();
+let bloqueado = false;
+
+function devil() {
+  if (bloqueado) return;
+  bloqueado = true;
+
+  pontos += 3;
+  if (pontos > max) pontos = max;
+  atualizar();
+
+  setTimeout(() => bloqueado = false, 100);
+}
