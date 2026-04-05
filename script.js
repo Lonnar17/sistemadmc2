@@ -163,3 +163,4 @@ function devil() {
 
   setTimeout(() => bloqueado = false, 100);
 }
+atualizar();
