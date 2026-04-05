@@ -1,0 +1,160 @@
+body {
+  background: #0d0d0d;
+  font-family: Arial;
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 420px;
+  margin: auto;
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* RANK */
+.rank-box {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.D { color: #777; }
+.C { color: #4aa3ff; }
+.B { color: #3cff8f; }
+.A { color: #ffe066; }
+.S { color: #ff4d4d; }
+.SS { color: #ff00ff; }
+.SSS { color: #ff00ff; text-shadow: 0 0 8px #ff00ff; }
+
+/* BARRA */
+.barra {
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+#progresso {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4aa3ff, #ff4d4d);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* DANO */
+.dano-box {
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+#tipoDano {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* HABILIDADES */
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.card.ativo {
+  border-color: #3cff8f;
+  background: #16241c;
+}
+
+.card.bloqueado {
+  opacity: 0.4;
+}
+
+.card p {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.erro { background: #5a0f0f; }
+.acerto { background: #1f6f4a; }
+.devil { background: #2a3c6f; }
+
+/* BOTÕES FLUTUANTES */
+.botoes {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 90%;
+  max-width: 420px;
+
+  display: flex;
+  gap: 8px;
+  z-index: 999;
+}
+
+/* espaço pra não cobrir conteúdo */
+body {
+  padding-bottom: 80px;
+}
+
+
+#hud {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  gap: 12px;
+
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+
+  padding: 6px 10px;
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* espaço pra não ficar escondido atrás do HUD */
+body {
+  padding-top: 50px;
+}
+
